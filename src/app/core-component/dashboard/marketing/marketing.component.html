@@ -1,0 +1,415 @@
+<div class="modal fade" id="exampleModalToggleAmazon" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="minipopup ">
+        <svg xmlns="http://www.w3.org/2000/svg" class="closeSvg" width="16" height="16" viewBox="0 0 28 28"
+          (click)="hideModal()">
+          <path d="m1.061 17.058 8-8m8-8-8 8m0 0-8-8m8 8 8 8" fill="none" stroke="#000" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="1.5"></path>
+        </svg>
+        <form [formGroup]="popForm">
+          <div class="row mx-0 bt-story">
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="industry">Industry:</label>
+                <select class="form-control" id="industry" formControlName="selectedIndustry" name="industry">
+                  <option *ngFor="let industry of industries" [value]="industry">{{ industry }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="geography">Geography:</label>
+                <select class="form-control" id="geography" formControlName="geography" name="geography">
+                  <option *ngFor="let geo of geography" [value]="geo">{{ geo }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="language">Language:</label>
+                <select class="form-control" id="language" formControlName="selectedLanguage" name="language">
+                  <option *ngFor="let lang of language" [value]="lang">{{ lang }}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row mx-0 bl-story">
+            <div class="col-md-3">
+              <div class="form-group">
+                <i class="feather icon-grid" data-bs-toggle="tooltip" title="feather icon-grid"></i>&nbsp;
+                <label class="template" for="template" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+                  Create from a template:</label>
+              </div>
+            </div>
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6 ">
+              <div class="form-group float-right">
+                <button type="submit" class="icon" (click)="onSubmit()"><i class="fa fa-paper-plane"
+                    aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content modal-custom">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Create from a template </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+            class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body options">
+        <div class="row">
+          <div class="col-md-4">
+            <label for="press-release" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">
+              <i class="fa-solid fa-bars"></i>&nbsp; Press Release
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="outreach-email" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">
+              <i class="fa-regular fa-envelope"></i>&nbsp; Outreach Email
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="linkedIn-hr" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal">
+              <i class="fa-brands fa-linkedin-in"></i>&nbsp; LinkedIn Hr Post
+            </label>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <label for="comm-email">
+              <i class="fa-regular fa-envelope"></i>&nbsp; Internal Communications Email
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="celebrations">
+              <i class="fa-solid fa-bars"></i>&nbsp; Celebrations</label>
+          </div>
+          <div class="col-md-4">
+            <label for="text-blend">
+              <i class="fa-solid fa-chart-bar"></i>&nbsp; Text Blend</label>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <label for="press-release">
+              <i class="fa-solid fa-bag-shopping"></i>&nbsp; Product Description
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="job-posting">
+              <i class="fa-solid fa-bag-shopping"></i>&nbsp; Job Posting</label>
+          </div>
+          <div class="col-md-4">
+            <label for="product-list">
+              <i class="fa-solid fa-bag-shopping"></i>&nbsp; Product Listing</label>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <label for="job">
+              <i class="fa-regular fa-bag-shopping"></i>&nbsp; Job Summary
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="sales-email">
+              <i class="fa-regular fa-envelope"></i>&nbsp; Sales Email</label>
+          </div>
+          <div class="col-md-4">
+            <label for="email-subject">
+              <i class="fa-regular fa-envelope"></i>&nbsp; Email Subject Line</label>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <label for="marketing-email">
+              <i class="fa-regular fa-envelope"></i>&nbsp; Marketing Email
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="taglines">
+              <i class="fa-solid fa-bars"></i>&nbsp; Taglines</label>
+          </div>
+          <div class="col-md-4">
+            <label for="email">
+              <i class="fa-regular fa-envelope"></i>&nbsp; Email </label>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <label for="press-release">
+              <i class="fa-solid fa-bars"></i>&nbsp; Call-to-actions
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="ad-copy">
+              <i class="fa-solid fa-bars"></i>&nbsp; Ad Copy</label>
+          </div>
+          <div class="col-md-4">
+            <label for="sales">
+              <i class="fa-solid fa-bars"></i>&nbsp; Sales Pitch</label>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <label for="Seo">
+              <i class="fa-solid fa-globe"></i>&nbsp; Seo Meta Tags
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="advertising">
+              <i class="fa-solid fa-book"></i>&nbsp; Creative Brief(Advertising)</label>
+          </div>
+          <div class="col-md-4">
+            <label for="videography">
+              <i class="fa-solid fa-book"></i>&nbsp; Creative Brief(Videography)</label>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <label for="marketing">
+              <i class="fa-solid fa-book"></i>&nbsp; Creative Brief(Marketing)
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="x-social">
+              <i class="fa-brands fa-x-twitter"></i>&nbsp; X Social Post</label>
+          </div>
+          <div class="col-md-4">
+            <label for="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>&nbsp; LinkedIn Social post</label>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <label for="tick-tok">
+              <i class="fa-brands fa-tiktok"></i>&nbsp; Tick Tok
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="google-ad">
+              <i class="fa-brands fa-google"></i>&nbsp; Google Ad</label>
+          </div>
+          <div class="col-md-4">
+            <label for="notification">
+              <i class="fa-regular fa-bell"></i>&nbsp; Push Notification</label>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <label for="google-res">
+              <i class="fa-brands fa-google"></i>&nbsp; Google Responsive Display Ad
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="vimeo">
+              <i class="fa-brands fa-vimeo"></i>&nbsp; Vimeo Blend</label>
+          </div>
+          <div class="col-md-4">
+            <label for="web-blend">
+              <i class="fa-solid fa-globe"></i>&nbsp; Web Blend</label>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <label for="summarize">
+              <i class="fa-solid fa-pen-to-square"></i>&nbsp; Summarize
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="Facebook">
+              <i class="fa-brands fa-facebook"></i>&nbsp; Facebook Ad</label>
+          </div>
+          <div class="col-md-4">
+            <label for="Document">
+              <i class="fa-regular fa-file"></i>&nbsp; Document Transform</label>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <label for="podcast">
+              <i class="fa-solid fa-podcast"></i>&nbsp; Podcast Blend
+            </label>
+          </div>
+          <div class="col-md-4">
+            <label for="insta">
+              <i class="fa-brands fa-instagram"></i>&nbsp; Instagram Ad</label>
+          </div>
+          <div class="col-md-4">
+            <label for="blog-post">
+              <i class="fa-solid fa-bars"></i>&nbsp; Blog Post
+            </label>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <label for="Youtube">
+              <i class="fa-brands fa-youtube"></i>&nbsp; Youtube Blend
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Popup for Press-Release -->
+<div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content modal-custom">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Press Release
+          <br>
+          <h6 class="subtitle-modal">Create a formal statement to issue on behalf of your company to announce news,
+            events,
+            product launches, or other significant developments</h6>
+        </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+            class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body options">
+        <form [formGroup]="popForm">
+          <div class="row">
+            <div class="form-group">
+              <label>What is the name of your company? *</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">What is the press release about? *</label>
+              <textarea name="Text1" class="form-control"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Share a CTA</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">What SEO keywords should be applied?</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-target="#exampleModalToggle2"
+          data-bs-toggle="modal">Back</button>
+        <button type="button" class="btn btn-primary" data-bs-target="#exampleModalToggle001" data-bs-toggle="modal">Generate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Popup for Outreach Email -->
+<div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content modal-custom">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Outreach Email</h1>      
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+            class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body options">
+        <form [formGroup]="popForm">
+          <div class="row">
+            <div class="form-group">
+              <label>What is the linked in profile of the candidate? *</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Share the job link URL *</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Share a CTA</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-target="#exampleModalToggle2"
+          data-bs-toggle="modal">Back</button>
+        <button type="button" class="btn btn-primary" data-bs-target="#exampleModalToggle001" data-bs-toggle="modal">Generate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Popup for LinkedIn Hr Post -->
+<div class="modal fade" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel5"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content modal-custom">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">LinkedIn HR Post</h1>       
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+            class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body options">
+        <form [formGroup]="popForm">
+          <div class="row">
+            <div class="form-group">
+              <label>What is the post about? *</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">What is the context or background information relevant to the post? *</label>
+              <textarea name="Text1" class="form-control"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="">Share a CTA</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-target="#exampleModalToggle2"
+          data-bs-toggle="modal">Back</button>
+        <button type="button" class="btn btn-primary" data-bs-target="#exampleModalToggle001" data-bs-toggle="modal">Generate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Popup for Answers Post -->
+<div class="modal fade" id="exampleModalToggle001" aria-hidden="true" aria-labelledby="exampleModalToggleLabel001"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content modal-custom">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Generate Title</h1>      
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+            class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body options">
+        <div class="row">Answer:</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-target="#exampleModalToggle2"
+          data-bs-toggle="modal">Back</button>
+      </div>
+    </div>
+  </div>
+</div>

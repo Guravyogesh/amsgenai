@@ -1,0 +1,22 @@
+{
+  "clients": {
+    "client1": {
+      "name": "Client 1",
+      "brandVoice": "Professional",
+      "brandTone": "Formal",
+      "additionalDetails": {
+        "key1": "value1",
+        "key2": "value2"      
+      }
+    },
+    "client2": {
+      "name": "Client 2",
+      "brandVoice": "Friendly",
+      "brandTone": "Casual",
+      "additionalDetails": {
+        "key1": "value1",
+        "key2": "value2"      
+      }
+    }   
+  }
+}

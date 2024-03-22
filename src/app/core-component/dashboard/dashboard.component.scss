@@ -1,0 +1,239 @@
+.card-title {
+  color: #007BFF;
+}
+
+.card-text {
+  color: #6C757D;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.custom-bg{
+  background-image: url(/src/assets/img/Aipresentation.png);
+  background-size: cover; 
+}
+
+.pointer:hover{
+cursor: pointer;
+}
+.preview:hover{
+cursor: pointer;
+}
+.card-container {
+display: flex;
+justify-content: center;
+align-items: center;
+ /* Optional: Adjust the height based on your design */
+}
+.chat-document{
+margin-bottom: -33px;
+width: 43rem;
+}
+.chat-documentai{
+margin-bottom: -4px;
+width: 43rem;
+}
+.chat-documentbtn{
+margin-bottom: -34px;
+width: 53rem;
+}
+
+.row .card {
+height: 100%;
+}
+
+.row .card img {
+object-fit: cover; /* Ensure the image covers the entire card */
+height: 50%; /* Adjust as needed based on your design */
+}
+
+.row .card-body {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+height: 100%; /* Adjust as needed based on your design */
+}
+
+.row .card-title {
+margin-bottom: 0; /* Remove default margin */
+}
+
+.dreamtitle{
+margin-left: 10px;
+font-family: sans-serif;
+font-weight: bold;
+}
+
+.main-heading {
+display: flex; /* Use flexbox to align items horizontally */
+align-items: center; /* Align items vertically at the center */
+justify-content: center;
+
+}
+
+.main-heading img {
+width: 50px; /* Adjust the width of the logo as needed */
+height: auto; /* Maintain aspect ratio */
+margin-right: 10px; /* Add margin to create space between the logo and the heading */
+}
+
+.card-heading {
+margin: 0; /* Remove any default margin on the heading */
+font-weight: bold;
+font-family: revert;
+
+}
+.headingtext-two{ 
+letter-spacing: -1.28px;
+}
+.icon {
+   min-width: 72px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #a4a3e5;
+    box-shadow: 0 2px 4px rgba(0,0,0,.16), 0 8px 8px rgba(0,0,0,.16);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.fa-paper-plane {
+  font-size: 28px
+}
+.presentation-section{
+  margin-bottom: 20px;
+}
+
+.category-logo {
+  margin-right: 4px;
+}
+.heading .active{
+  background: #d8d8ff;
+  font-weight: 500;
+}
+@media only screen and (max-width: 768px) {
+/* Apply styles for tablets (including iPads) */
+.main {
+  padding: 10px;
+}
+
+.main-heading img {
+  width: 40px;
+  margin-right: 8px;
+}
+
+.card-heading {
+  font-size: 18px;
+}
+
+.dreamtitle {
+  margin-top: 15px;
+  font-size: 18px;
+}
+}
+
+.nav-tabs .nav-item.active a {
+  border-bottom: 3px solid;
+  color: #FF9F43;
+}
+
+.card-header {
+  cursor: pointer;
+}
+
+
+.horizontal-menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.scroll-button {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .chat-document .col-md-12 {
+    flex: 0 0 100%; /* Full width for the column on smaller screens */
+  }
+
+  .image-upload {
+    text-align: center; /* Center the image upload section */
+  }
+
+  .image-uploads img {
+    width: 50px; /* Adjust the width of the upload image */
+  }
+
+  .image-uploads h4 {
+    font-size: 14px; /* Adjust the font size of the instruction text */
+    margin-top: 10px; /* Add margin between the image and the text */
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .chat-document .col-md-12 {
+    max-width: 70%; /* Adjust the maximum width of the file upload container */
+    margin: 0 auto; /* Center the file upload container */
+  }
+
+  .image-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-uploads {
+    margin-top: 20px; /* Add some spacing above the image and text */
+  }
+}
+/* Media Query for iPhone SE */
+@media only screen and (max-width: 320px) {
+  .card-container .card {
+    margin: 10px; /* Add some margin to the card */
+  }
+
+  .chat-document .col-md-12 {
+    padding: 10px; /* Add padding around the form in chat-document */
+  }
+
+  .image-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image-uploads img {
+    max-width: 50px; /* Adjust the max-width of the image */
+    margin-bottom: 10px; /* Add some margin below the image */
+  }
+
+  .image-uploads h4 {
+    font-size: 14px; /* Adjust the font size of the text */
+  }
+}

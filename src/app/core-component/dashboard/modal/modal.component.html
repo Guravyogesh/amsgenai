@@ -1,0 +1,217 @@
+<div class="modal fade" id="exampleModalToggleAmazon" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="minipopup ">
+        <svg xmlns="http://www.w3.org/2000/svg" class="closeSvg" width="16" height="16" viewBox="0 0 28 28"
+          (click)="hideModal()">
+          <path d="m1.061 17.058 8-8m8-8-8 8m0 0-8-8m8 8 8 8" fill="none" stroke="#000" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="1.5"></path>
+        </svg>
+        <form [formGroup]="popForm">
+          <div class="row mx-0 bt-story">
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="industry">Industry:</label>
+                <select class="form-control" id="industry" formControlName="selectedIndustry" name="industry">
+                  <option *ngFor="let industry of industries" [value]="industry">{{ industry }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="geography">Geography:</label>
+                <select class="form-control" id="geography" formControlName="geography" name="geography">
+                  <option *ngFor="let geo of geography" [value]="geo">{{ geo }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="language">Language:</label>
+                <select class="form-control" id="language" formControlName="selectedLanguage" name="language">
+                  <option *ngFor="let lang of language" [value]="lang">{{ lang }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <button class="preview-eye" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Preview <i
+                  class="fa-regular fa-eye"></i></button>
+            </div>
+          </div>
+          <div class="row mx-0 b-story">
+            <div class="col-md-12">
+              <h4 class="brandStory d-block">
+                {{responce?.heading}}
+              </h4>
+            </div>
+            <div class="col-md-3" *ngFor="let prompt of responce?.prompt; let i = index">
+              <div class="form-group">
+                <label>{{prompt}}</label>
+                <input type="text" placeholder="Enter your prompt here" class="form-control prompt" id="usr"
+                  [formControlName]="'prompt' + (i + 1)">
+              </div>
+            </div>
+          </div>
+          <div class="row mx-0 bl-story">
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="page">Page:</label>
+                <select class="form-control" id="page" formControlName="page">
+                  <option *ngFor="let page of Pages" [value]="page">{{ page }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group ">
+                <label for="wordAmounts"  style=" white-space: nowrap;">Output Type:</label>
+                <select class="form-control" id="wordAmounts" formControlName="wordAmounts">
+                  <option *ngFor="let word of wordAmounts" [value]="word">{{ word }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 ">
+              <div class="form-group float-right">
+                <button type="submit" class="icon" (click)="onSubmit()"><i class="fa fa-paper-plane"
+                    aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+  tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+    <div class="modal-content modal-custom">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">{{this.wikipediaLable}}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+            class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="Sources">
+              <div class="flex-container">
+                <i class="fa-solid fa-bars"></i>
+                <h4 class="preview-heading"> &nbsp; Sources</h4>
+              </div>
+              <div class="container mt-4">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card shadow">
+                      <div class="card-body">
+                        <p class="card-text">{{this.wikipediaLable}}</p>
+                        <p class=""><i class="fa-brands fa-wikipedia-w mr-2"></i>
+                          <a [href]="wikipediaLink" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="card shadow">
+                      <div class="card-body">
+                        <p class="card-text">{{this.mediumLable}}</p>
+                        <p class=""><i class="fa-brands fa-medium mr-2"></i>
+                          <a [href]="mediumLink" target="_blank" rel="noopener noreferrer">Medium</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="card shadow">
+                      <div class="card-body">
+                        <p class="card-text">{{this.googleLable}}</p>
+                        <p class=""><i class="fa-brands fa-google mr-2"></i>
+                          <a [href]="googleLink" target="_blank" rel="noopener noreferrer">Google</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="answers">
+              <div class="flex-container">
+                <i class="fa-solid fa-align-left"></i>
+                <h4 class="preview-heading">&nbsp; Answer</h4>
+              </div>
+              <div class="col-lg-12 col-sm-12 col-12" id="printTable">
+                <div *ngFor="let option of processedOptions" >
+                  <ul>
+                    <li *ngFor="let point of option.points">
+                      <span *ngIf="point.includes('**') else normalText">{{ point }}</span>
+                      <ng-template #normalText>{{ point }}</ng-template>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <hr>             
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div *ngFor="let imageUrl of generatedImage">
+              <img [src]="imageUrl.url" alt="Image">             
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <i class="fa-solid fa-video mr-2"></i> Search Video
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <img class="image" src="https://via.placeholder.com/300" alt="Image 1">
+                    <img class="image" src="https://via.placeholder.com/300" alt="Image 2">
+                    <img class="image" src="https://via.placeholder.com/300" alt="Image 3">
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      <i class="fa-regular fa-image mr-2"></i> Generate Video
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <img class="image" src="https://via.placeholder.com/300" alt="Image 1">
+                      <img class="image" src="https://via.placeholder.com/300" alt="Image 2">
+                      <img class="image" src="https://via.placeholder.com/300" alt="Image 3">
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      <i class="fa-solid fa-download"></i> &nbsp; Dowload
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body" style="display: flex; gap: 20px;">
+                      <button class="btn btn-primary" (click)="downloadPdf()" ><i class="fa-solid fa-file-pdf"></i>&nbsp; PDF</button>
+                      <button class="btn btn-primary" (click)="exportToCsv()" ><i
+                          class="fa-solid fa-file-csv" ></i>&nbsp;CSV</button>
+                      <button class="btn btn-primary" (click)="downloadPpt()" ><i class="fas fa-file-powerpoint"></i>&nbsp;PPT</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

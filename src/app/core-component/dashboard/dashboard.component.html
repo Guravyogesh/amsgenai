@@ -1,0 +1,381 @@
+<div class="main pointer" style="background-color: #f4f4f4; border-radius: 9px;">
+  <div class="main-heading">
+    <!-- <img class="mt-3" src="assets/img/logo-small.png" alt=""> -->
+    <span>
+      <h2 class="card-heading mt-3"><B>HexaAI &nbsp;|</B>&nbsp;<span class="headingtext-two">Your Personal AI
+          Workspace</span></h2>
+    </span>
+  </div>
+  <div class="card-container mt-3">
+    <div class="card col-md-8">
+      <div class="card-header">
+        <ul class="nav nav-tabs">
+          <li class="nav-item" [class.active]="currentStep === 1">
+            <a class="nav-link" (click)="goToStep(1)">My Project</a>
+          </li>
+          <li class="nav-item" [class.active]="currentStep === 2">
+            <a class="nav-link" (click)="goToStep(2)">My Templates</a>
+          </li>
+          <li class="nav-item" [class.active]="currentStep === 3">
+            <a class="nav-link" (click)="goToStep(3)">Recommended</a>
+          </li>
+          <li class="nav-item" [class.active]="currentStep === 4">
+            <a class="nav-link" (click)="goToStep(4)">All</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <div *ngIf="currentStep === 1">
+          <h4 class="card-title">Slide 1</h4>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <img src="assets/img/education.png" alt="img">
+                <div class="card-body">
+                  <h5 class="card-title">Create new presentation</h5>
+                  <p class="card-text">Generate PPT/slides for presentation</p>
+                  <!-- <a href="#" class="btn btn-primary">Explore</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="assets/img/education.png" alt="img">
+                <div class="card-body">
+                  <h5 class="card-title">Apple Inc.: A Comprehensive Analysis</h5>
+                  <p class="card-text">Updated 7 days ago</p>
+                  <!-- <a href="#" class="btn btn-primary">Explore</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="currentStep === 2">
+          <h4 class="card-title">My Templates</h4>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <img src="assets/img/education.png" alt="img">
+                <div class="card-body">
+                  <h5 class="card-title">Data Analysis Report</h5>
+                  <p class="card-text">Decoding Q1 Revenue: A Sales Analy..</p>
+                  <!-- <a href="#" class="btn btn-primary">Explore</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="currentStep === 3">
+          <h4 class="card-title">Recommended</h4>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <img src="assets/img/education.png" alt="img">
+                <div class="card-body">
+                  <h5 class="card-title">DALLE3 Image-Gen</h5>
+                  <p class="card-text">Generate image via your prompt!</p>
+                  <!-- <a href="#" class="btn btn-primary">Explore</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="assets/img/education.png" alt="img">
+                <div class="card-body">
+                  <h5 class="card-title">Create new presentation</h5>
+                  <p class="card-text">Generate PPT/slides for presentation</p>
+                  <!-- <a href="#" class="btn btn-primary">Explore</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="assets/img/education.png" alt="img">
+                <div class="card-body">
+                  <h5 class="card-title">Data Analysis Report</h5>
+                  <p class="card-text">Decoding Q1 Revenue: A Sales Ana..</p>
+                  <!-- <a href="#" class="btn btn-primary">Explore</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="mt-3"></div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="assets/img/education.png" alt="img">
+                <div class="card-body">
+                  <h5 class="card-title">Business Plan Pitch Deck</h5>
+                  <p class="card-text">PopAi: Revolutionizing Q&A and PD</p>
+                  <!-- <a href="#" class="btn btn-primary">Explore</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="assets/img/education.png" alt="img">
+                <div class="card-body">
+                  <h5 class="card-title">Lesson Material Slides</h5>
+                  <p class="card-text">Uncovering the Essentials of Physic</p>
+                  <!-- <a href="#" class="btn btn-primary">Explore</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="assets/img/education.png" alt="img">
+                <div class="card-body">
+                  <h5 class="card-title">Assignment Report</h5>
+                  <p class="card-text">Analyzing the Growth of ZOOM in CO/p>
+                    <!-- <a href="#" class="btn btn-primary">Explore</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="currentStep === 4">
+          <h4 class="card-title">All</h4>
+          <div class="horizontal-menu-container">
+            <div class="menu-wrapper">  
+              <ul>
+                <li *ngFor="let topic of jsonData.topics" [value]="topic">
+                  <button (click)="toCareer(topic.heading)" type="button" [ngClass]="{'active': topic == heading }" class="btn btn-outline-secondary heading"
+                    style="border-radius: 20px; text-transform: capitalize;">                    
+                  <span class="category-logo">{{topic.emoji}}</span>
+                    {{topic.heading}}
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <br>
+          <div class="presentation mt-3" *ngFor="let section of jsonData?.sections?.content" id="{{section.class}}">
+            <section id="{{section.class}} mt-3">
+              <h4 class="dreamtitle">{{section.heading}}</h4>
+              <div class="row">
+                <div class="col-md-4 presentation-section" *ngFor="let data of section.data">
+                  <div class="card">
+                    <img [src]="data.img" alt="img">
+                    <div class="card-body ">
+                      <h5 class="card-title">{{data.subheading}}</h5>
+                      <p class="card-text">{{data.text}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="card shadow">
+      <h4 class="dreamtitle mt-4">Chat With Document</h4>
+      <div class="card-body">
+        <div class="row chat-document">
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="image-upload">
+                <input type="file">
+                <div class="image-uploads">
+                  <img src="assets/img/icons/upload.svg" alt="img">
+                  <h4>Click to upload or Drop PDF/DOC here</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="card shadow mt-1">
+      <h4 class="dreamtitle mt-1">Amazon</h4>
+      <div class="card-body">
+        <h4 class="card-title"></h4>
+        <div class="row chat-document ">
+          <div class="custom-bg col-lg-3 col-sm-6 col-3 d-flex " (click)="modal.showModal(jsonData.branStoryvalue)">
+            <div class="dash-count">
+              <div class="dash-counts">
+                <p>Brand Story </p>
+              </div>
+              <div class="dash-imgs">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-3 d-flex" (click)="modal.showModal(jsonData.productDifferentationvalue)">
+            <div class="dash-count das1">
+              <div class="dash-counts">
+                <p>Product-Differentiation</p>
+              </div>
+              <div class="dash-imgs">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+            </div>
+          </div>
+          <div class="custom-bg col-lg-3 col-sm-6 col-3 d-flex " (click)="modal.showModal(jsonData.targetAudiencevalue)">
+            <div class="dash-count das3">
+              <div class="dash-counts">
+                <p>Target Audience</p>
+              </div>
+              <div class="dash-imgs"> 
+                <i class="fa-regular fa-user"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-3 d-flex" (click)="modal.showModal(jsonData.pricingStartegyvalue)">
+            <div class="dash-count das4">
+              <div class="dash-counts">
+                <p>Pricing Strategy</p>
+              </div>
+              <div class="dash-imgs">
+                <i class="fa-solid fa-cubes-stacked"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-3 d-flex" (click)="modal.showModal(jsonData.amazonKeywordyvalue)">
+            <div class="dash-count">
+              <div class="dash-counts">
+                <p>Amazon Keyword</p>
+              </div>
+              <div class="dash-imgs">
+                <i class="fa-brands fa-amazon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-3 d-flex" (click)="modal.showModal(jsonData.productDetailpagevalue)">
+            <div class="dash-count das3">
+              <div class="dash-counts">
+                <p>Product detail page & A+ content</p>
+              </div>
+              <div class="dash-imgs">
+                <i class="fa-solid fa-list-ol"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="card-container" style="margin-bottom: 60px;">    
+    <div class="card shadow mt-1">
+      <h4 class="dreamtitle mt-1">AI Presentation</h4>
+      <div class="card-body">
+        <div class="row chat-document ">
+          <div class="custom-bg col-lg-6 col-sm-6 col-12 d-flex ">
+            <div class="dash-count das5">
+              <div class="dash-counts">
+                <h6>Create a new
+                  presentation
+                  <br>from a single
+                  topic
+                </h6>
+              </div>
+              <div class="dash-imgs">
+                <i class="fa-solid fa-person-chalkboard"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-6 col-12 d-flex">
+            <div class="dash-count das3">
+              <div class="dash-counts">
+                <h6>Get started with <br>ready-made templates</h6>
+              </div>
+              <div class="dash-imgs">
+                <i class="fa-solid fa-folder-open"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <h4 class="dreamtitle">Creation Templates</h4>
+  <div class="card-container" style="margin-bottom: 112px;">
+    <div class="card shadow mt-1">
+      <div class="card-body">
+        <div class="row chat-documentai ">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/education.png" alt="img">
+              <div class="card-body">
+                <h5 class="card-title">Education Writing</h5>
+                <p class="card-text">essay, resume, interview, research</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/Presentation.png" alt="img">
+              <div class="card-body">
+                <h5 class="card-title">Presentation</h5>
+                <p class="card-text">Speech & Slides</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/education.png" alt="img">
+              <div class="card-body">
+                <h5 class="card-title">Image-gen & QA</h5>
+                <p class="card-text">DallE3 gen-art, Image Q&A tools,Prompts</p>
+              </div>
+            </div>
+          </div>
+        </div><br>
+        <div class="row chat-documentai">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/Profesional Writing.png" alt="img">
+              <div class="card-body">
+                <h5 class="card-title">Professional Writing</h5>
+                <p class="card-text">SEO, Blogs, Articles, Social Media</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/Flow chart.png" alt="img">
+              <div class="card-body">
+                <h5 class="card-title">Flow Chart</h5>
+                <p class="card-text">Flow-chart, Data collection & Visuaalization</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/img/Coading answers.png" alt="img">
+              <div class="card-body">
+                <h5 class="card-title">Coading answers</h5>
+                <p class="card-text">Software and web development Q&A</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="card-container mt-1">
+    <div class="card shadow " style="position:fixed !important; bottom:0; margin-left: 7rem;">
+      <div class="card-body">
+        <div class="row chat-documentbtn">
+          <div class="col-md-10">
+            <div class="form-group">
+              <input type="text" placeholder="Enter Your Prompt" />
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <button type="submit" class="icon"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-modal #modal></app-modal>

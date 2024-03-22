@@ -1,0 +1,77 @@
+
+<div class="page-header">
+  <div class="page-title">
+    <h4>Pricing Strategy <span>(How have you priced your product, and how does it compare to similar products?)</span></h4>
+    <h6>Compare your pricing against competitors to ensure competitiveness</h6>
+  </div>
+</div>
+<!-- /add -->
+<div class="row">
+<div class="card col-8">
+  <div class="card-body">
+    <div class="row form-section">
+      <div class="col-lg-3 col-sm-6 col-12 section">
+        <div class="form-group">
+          <!-- <h5>Product Attributes</h5> -->
+          <label>Competitive Pricing,
+            Premium Pricing,
+            Dynamic Pricing</label>
+          <textarea name="Text1" [(ngModel)]="Competitive"  cols="50" rows="6"></textarea>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-12 section">
+        <div class="form-group">
+          <!-- <h5>Consumer Value</h5> -->
+          <label style="margin-top: 20px;">Penetration Pricing,
+            Bundle Pricing</label>
+          <textarea name="Text1" [(ngModel)]="Penetration" cols="50" rows="4"></textarea>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-12 section">
+        <div class="form-group">
+          <!-- <h5>Brand Identity</h5> -->
+          <label style="margin-top: 20px;">Value-Based Pricing,
+            Psychological Pricing</label>
+          <textarea name="Text1" [(ngModel)]="ValueBased" cols="50" rows="4"></textarea>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-12 section">
+        <div class="form-group">
+          <!-- <h5>Presentation and Packaging</h5> -->
+          <label>Loss Leader Pricing,
+            MAP Pricing (Minimum Advertised Price)</label>
+          <textarea name="Text1" [(ngModel)]="Loss" cols="50" rows="4"></textarea>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-12 section">
+        <div class="form-group">
+          <!-- <h5>Presentation and Packaging</h5> -->
+          <label>Geographic Pricing </label>
+          <textarea name="Text1" [(ngModel)]="Geographic" cols="50" rows="4"></textarea>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-12 section">
+        <div class="form-group">
+          <!-- <h5>Strategic Collaborations</h5> -->
+          <label>Additional Information</label>
+          <textarea name="Text1" [(ngModel)]="Additional" cols="50" rows="4"></textarea>
+        </div>
+      </div>
+      <div class="col-lg-12" style="margin-bottom: 18px;margin-top: 15px; text-align: end;">
+      
+        <button type="button" [routerLink]="routes.barcode" class="btn btn-primary ml-2" style="margin-left:2rem"
+          (click)="onSubmit()">Next</button>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="card col-md-4" *ngIf="getObjectKeys(OutputData).length>1" >
+  <div class="card-body">
+    <h5>selected datas</h5>
+    <div *ngFor="let key of getObjectKeys(OutputData)">
+      <p><strong>{{ key }}:</strong> {{ OutputData[key] }}</p>
+    </div>
+  </div>    
+</div>
+</div>
+<!-- /add -->

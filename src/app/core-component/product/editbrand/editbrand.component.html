@@ -1,0 +1,118 @@
+<div class="page-header">
+    <div class="page-title">
+        <h4>Content Creation Screen</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="contentCreationForm" (ngSubmit)="onSubmit()">
+                <div class="row form-section">
+                    <div class="col-lg-4 col-sm-6 col-12 section">
+                        <div class="form-group">
+                            <!-- <h5>Product Attributes</h5> -->
+                            <label>Content Purpose</label>
+                            <input type="text" formControlName="contentPurpose" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12 section">
+                        <div class="form-group">
+                            <!-- <h5>Product Attributes</h5> -->
+                            <label>Target Audience</label>
+                            <select class="form-control form-select" id="Unit" name="Unit"
+                                formControlName="targetAudience">
+                                <option>Choose Audience</option>
+                                <option *ngFor="let unit of targetAudience">{{unit.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12 section">
+                        <div class="form-group">
+                            <!-- <h5>Product Attributes</h5> -->
+                            <label>Key Message</label>
+                            <input type="text" formControlName="keyMessage" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12 section">
+                        <div class="form-group">
+                            <!-- <h5>Product Attributes</h5> -->
+                            <label>Tone and Style</label>
+                            <select class="form-control form-select" id="Unit" name="Unit"
+                                formControlName="toneAndStyle">
+                                <option>Choose Tone and Style</option>
+                                <option *ngFor="let unit of toneandStyle">{{unit.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12 section">
+                        <div class="form-group">
+                            <!-- <h5>Product Attributes</h5> -->
+                            <label>Content Format</label>
+                            <select class="form-control form-select" id="Unit" name="Unit"
+                                formControlName="contentFormat">
+                                <option>Choose Content Format</option>
+                                <option *ngFor="let unit of contentFormat">{{unit.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12 section">
+                        <div class="form-group">
+                            <!-- <h5>Product Attributes</h5> -->
+                            <label>SEO Keywords</label>
+                            <input type="text" formControlName="seoKeywords" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12 section">
+                        <div class="form-group">
+                            <!-- <h5>Product Attributes</h5> -->
+                            <label>Important Information</label>
+                            <input type="text" formControlName="importantInformation" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12 section">
+                        <div class="form-group">
+                            <!-- <h5>Product Attributes</h5> -->
+                            <label>Visual Elements</label>
+                            <select class="form-control form-select" id="Unit" name="Unit"
+                                formControlName="visualElements">
+                                <option>Choose Visual Elements</option>
+                                <option *ngFor="let unit of visualElements">{{unit.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12 section">
+                        <div class="form-group">
+                            <!-- <h5>Product Attributes</h5> -->
+                            <label>Call to Action (CTA)</label>
+                            <input type="text" formControlName="callToAction" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12 section">
+                        <div class="form-group">
+                            <!-- <h5>Product Attributes</h5> -->
+                            <label>References and Sources</label>
+                            <input type="text" formControlName="referencesAndSources" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12 section">
+                        <div class="form-group">
+                            <!-- <h5>Product Attributes</h5> -->
+                            <label>Additional Notes</label>
+                            <input type="text" formControlName="additionalNotes" />
+                        </div>
+                    </div>
+                    <div class="col-lg-12" style="margin-bottom: 18px;margin-top: 15px; text-align: end;">
+                        <button type="submit" class="btn btn-primary ml-2" style="margin-left:2rem">Submit</button>
+                    </div>
+                </div>
+            </form>
+            <div *ngIf="Output" class="col-lg-12 col-sm-6 col-12 section">
+                <div class="form-group">
+                    <label>Output</label>
+                    <textarea class="form-control" [(ngModel)]="Output" rows="10" cols="50" readonly></textarea>
+                    <!-- <input type="text" [(ngModel)]="Output" readonly/> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

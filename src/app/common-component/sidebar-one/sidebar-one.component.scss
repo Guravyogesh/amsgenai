@@ -1,0 +1,101 @@
+.none {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}
+
+#sidebar .sidebar-inner {
+  width: 100%;
+}
+
+.mainactive {
+  background: #1b2850;
+  color: #fff;
+  border-radius: 5px;
+}
+.submenu-open-one {
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid rgba(222, 226, 230, 0.5);
+}
+.sidebar .sidebar-menu > ul > li.submenu-open .submenu-hdr.submenu-hdr-one {
+  margin: 15px 0 10px 0;
+}
+.sidebar .sidebar-menu > ul > li.submenu-open .submenu-hdr.submenu-hdr-one:first-child {
+  margin-top: 0;
+}
+.sidebar .sidebar-menu > ul > li.submenu-open ul .submenu ul .submenus-one.active a{
+  background: none;
+}
+
+label,progress {
+  width: 100%;
+}
+label span {
+  color: blue;
+  font-size: 16px;
+  float: right;
+  font-weight: bolder;
+}
+ .profileset {
+  padding: 10px 10px 3px;
+  display: flex;
+  background-color: #f6f6f7;
+  border: 1px solid #f6f6f7;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+
+.profileset .user-img {  
+  position: relative;
+}
+
+ .profileset .user-img img {
+  margin-top: 0;
+}
+
+ .user-img img {
+  width: 38px;
+  border-radius: 50%;
+}
+
+  .user-img .status {
+  bottom: 10px;
+}
+
+ .user-img .status {
+  border: 2px solid #fff;
+  height: 10px;
+  width: 10px;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #28C76F;
+}
+
+ .profileset .profilesets {
+  margin-left: 10px;
+}
+
+ .profileset .profilesets h6 {
+  font-size: 14px;
+  color: #212B36;
+  font-weight: 500;
+}
+
+ .profileset .profilesets h5 {
+  font-size: 14px;
+  color: #637381;
+}
+// .profileAndplan {
+//   position: absolute;
+//   bottom: 70px;
+//   width: 120px;
+//   left: 50%;
+//   transform: translateX(-50%);
+// }

@@ -1,0 +1,499 @@
+{
+  "Pages": [
+    "5",
+    "15",
+    "20"
+  ],
+  "wordAmounts": [
+    "Bullets",
+    "Brief",
+    "Regular",
+    "Detailed"
+  ],
+  "audienceList": [
+    "General",
+    "Investor",
+    "Business",
+    "Student",
+    "Myself"
+  ],
+  "referenceList": [
+    "Auto-Search",
+    "Off"
+  ],
+  "topics": [
+    {
+      "heading": "presentation",
+      "emoji": "📺"
+    },
+    {
+      "heading": "flowchart",
+      "emoji": "📊"
+    },
+    {
+      "heading": "image",
+      "emoji": "🖼️"
+    },
+    {
+      "heading": "academic",
+      "emoji": "📓"
+    },
+    {
+      "heading": "career",
+      "emoji": "💼"
+    },
+    {
+      "heading": "blog",
+      "emoji": "🎈"
+    },
+    {
+      "heading": "seo",
+      "emoji": "📈"
+    },
+    {
+      "heading": "marketing",
+      "emoji": "💵"
+    },
+    {
+      "heading": "sumerize",
+      "emoji": "✏️"
+    },
+    {
+      "heading": "coading",
+      "emoji": "💻"
+    }
+  ],
+  "languageList": [
+    "Spanish",
+    "French",
+    "German",
+    "Italian",
+    "Dutch",
+    "Portuguese",
+    "Russian",
+    "Chinese (Simplified)",
+    "Japanese",
+    "Korean",
+    "Arabic"
+  ],
+  "expiredProducts": [
+    {
+      "SNo": "1",
+      "ProductCode": "IT0001",
+      "ProductName": "Orange",
+      "img": "assets/img/popup/product/product2.jpg",
+      "BrandName": "N/D",
+      "CategoryName": "Fruits",
+      "ExpiryDate": "12-12-2022"
+    },
+    {
+      "SNo": "2",
+      "ProductCode": "IT0002",
+      "ProductName": "Pineapple",
+      "img": "assets/img/popup/product/product3.jpg",
+      "BrandName": "N/D",
+      "CategoryName": "Fruits",
+      "ExpiryDate": "25-11-2022"
+    },
+    {
+      "SNo": "3",
+      "ProductCode": "IT0003",
+      "ProductName": "Stawberry",
+      "img": "assets/img/popup/product/product4.jpg",
+      "BrandName": "N/D",
+      "CategoryName": "Fruits",
+      "ExpiryDate": "19-11-2022"
+    },
+    {
+      "SNo": "4",
+      "ProductCode": "IT0004",
+      "ProductName": "Avocat",
+      "img": "assets/img/popup/product/product5.jpg",
+      "BrandName": "N/D",
+      "CategoryName": "Fruits",
+      "ExpiryDate": "20-11-2022"
+    }
+  ],
+  "branStoryvalue": {
+    "heading": "Brand Story",
+    "prompt": [
+      "Origin story",
+      "Brand values",
+      "Evolution and growth",
+      "Differentiation"
+    ]
+  },
+  "productDifferentationvalue": {
+    "heading": "Product Differentiation",
+    "prompt": [
+      "Quality and Durability",
+      "Sustainability",
+      "Brand Story and Heritage",
+      "Strategic Collaborations"
+    ]
+  },
+  "targetAudiencevalue": {
+    "heading": "Target Audience",
+    "prompt": [
+      "Brand Preferences",
+      "Communication Preferences",
+      "Buying Motivations",
+      "Pain Points"
+    ]
+  },
+  "pricingStartegyvalue": {
+    "heading": "Pricing Startegy",
+    "prompt": [
+      "Competitive Pricing",
+      "Premium Pricing",
+      "Dynamic Pricing",
+      "Penetration Pricing"
+    ]
+  },
+  "amazonKeywordyvalue" :{
+    "heading": "Amazon Keyword",
+    "prompt": [
+      "Broad keyword",
+      "Phrase keyword",
+      "Exact keyword"
+    ]
+  },
+  "productDetailpagevalue" :{
+    "heading": "Product detail page(Icon) & A+ content",
+    "prompt": [ 
+      "Strategic Keyword Placement",
+      "Product Title",
+      "Informative description",
+      "EBC description"
+    ]
+  },
+  "sections": {
+    "content": [
+      {
+        "heading": "Presentation",
+        "class": "presentation",
+        "data": [
+          {
+            "subheading": "Data Analysis Report",
+            "text": "Decoding Q1 Revenue: A Sales Analysis...",
+            "img": "assets/img/popup/dataanalysis-template.png"
+          },
+          {
+            "subheading": "Business Plan Pitch Deck",
+            "text": " Revolutionizing Q&A and PDF Summaries with AI Business Plan...",
+            "img": "assets/img/popup/businessplan-template.png"
+          },
+          {
+            "subheading": "Lesson Material Slides",
+            "text": "Uncovering the Essentials of Physics...",
+            "img": "assets/img/popup/lessonmater-template.png"
+          },
+          {
+            "subheading": "Assignment Report",
+            "text": "Analyzing the Growth of ZOOM in COVID era...",
+            "img": "assets/img/popup/assignment-template.png"
+          },
+          {
+            "subheading": "Institute Introduction",
+            "text": "Unveiling the Missions of HelpCare Foundation...",
+            "img": "assets/img/popup/instituteintro-template.png"
+          },
+          {
+            "subheading": "PPT composer from scratch",
+            "text": "Generate PPT/slides for presentation and speech...",
+            "img": "assets/img/popup/template-PPT+composer+from+scratch.png"
+          },
+          {
+            "subheading": "Create speaker note",
+            "text": "Create speaker note for your presentations",
+            "img": "assets/img/popup/template-speaker+notes.png"
+          }
+        ]
+      },
+      {
+        "heading": "Flowchart",
+        "class": "flowchart",
+        "data": [
+          {
+            "subheading": "Mind Mapping for Any Type of Ideation",
+            "text": "Generate a mind map based on knowledge...",
+            "img": "assets/img/popup/template-MindMappingIdeation.png"
+          },
+          {
+            "subheading": "Knowledge mindmap from paragraph",
+            "text": "Summarize any articles and gene...",
+            "img": "assets/img/popup/template-knowledge.png"
+          }
+        ]
+      },
+      {
+        "heading": "Image",
+        "class": "image",
+        "data": [
+          {
+            "subheading": "DALLE3 Image-Gen",
+            "text": "Generate image via your prompt!",
+            "img": "assets/img/popup/template-dalle3.png"
+          },
+          {
+            "subheading": "Quick Text Extractor",
+            "text": "Extract text from any image into an editable format.",
+            "img": "assets/img/popup/extract+text.png"
+          },
+          {
+            "subheading": "Copy Checker for Marketing Material",
+            "text": "Proofread the wording on your designs with a screenshot",
+            "img": "assets/img/popup/copy+checker.png"
+          },
+          {
+            "subheading": "Image translator",
+            "text": "Translate words in images in one minute!",
+            "img": "assets/img/popup/img+translator.png"
+          },
+          {
+            "subheading": "Snapshot Homework",
+            "text": "For Multiple Choice Questions on history/geography/biolog",
+            "img": "assets/img/popup/homework+assistant.png"
+          }
+        ]
+      },
+      {
+        "heading": "Academic",
+        "class": "academic",
+        "data": [
+          {
+            "subheading": "Human Written |100% Unique |Essay Writing",
+            "text": "Get Your Human-Written Essay | Plagiarism Free | Optimized Long-Form Article",
+            "img": "assets/img/popup/Coading answers.png"
+          },
+          {
+            "subheading": "Smart Research",
+            "text": "Unveil the secrets to success ",
+            "img": "assets/img/popup/Profesional Writing.png"
+          },
+          {
+            "subheading": "Turn equations into LaTex",
+            "text": "Turn any equation into LaTex",
+            "img": "assets/img/popup/template-latex.png"
+          },
+          {
+            "subheading": "Research Proposal",
+            "text": "Generate a topic-based research proposal in a minute",
+            "img": "assets/img/popup/template-research+proposal.png"
+          },
+          {
+            "subheading": "Best email corrector for professionals",
+            "text": "Create the most professional emails from a Correspondence Editor with an IQ like albert einstein.",
+            "img": "assets/img/popup/Coading answers.png"
+          },
+          {
+            "subheading": "Keyword Ideas by Search Intent",
+            "text": "Find keyword ideas related to a keyword, and categorises them in a table by search inten",
+            "img": "assets/img/popup/Presentation.png"
+          }
+        ]
+      },
+      {
+        "heading": "Career",
+        "class": "career",
+        "data": [
+          {
+            "subheading": "Cover Letter for a Job Title",
+            "text": "AI-powered tool that helps you write professional and personalized cover letters in minute",
+            "img": "assets/img/popup/Coading answers.png"
+          },
+          {
+            "subheading": "Tailor Your Resume/CV to match a Job",
+            "text": "Professional resume writer and helping you to tailor your resumes to match the requirements of a specific job posting",
+            "img": "assets/img/popup/template-resume.png"
+          },
+          {
+            "subheading": "Career Transition Coaching",
+            "text": "Ready for your next career transition? Get started with a tailored action plan based on your specific career goals.",
+            "img": "assets/img/popup/Profesional Writing.png"
+          },
+          {
+            "subheading": "Write Linkedin Post",
+            "text": "Create SEO friendly engaging LinkedIn post",
+            "img": "assets/img/popup/template-linkedin+post.png"
+          },
+          {
+            "subheading": "Job Interview",
+            "text": "Replicate an interview. Select the Job Title you ar",
+            "img": "assets/img/popup/Coading answers.png"
+          }
+        ]
+      },
+      {
+        "heading": "Blog&Article",
+        "class": "blog",
+        "data": [
+          {
+            "subheading": "Create SEO Blog with Pics/Diagrams from any topica",
+            "text": "Create insightful, multi-format blogs with instant search results.",
+            "img": "assets/img/popup/template-seo+blog.png"
+          },
+          {
+            "subheading": "Human-like Rewriter",
+            "text": "Transform AI-written content into authentic human-style prose with our intuitive tool designed to refine and elevate machine-generated articles.",
+            "img": "assets/img/popup/Profesional Writing.png"
+          },
+          {
+            "subheading": "Better Content Outlines",
+            "text": "Supercharge your content production! Outlines Includes FAQs and headings.",
+            "img": "assets/img/popup/Coading answers.png"
+          },
+          {
+            "subheading": "Optimized Long Article",
+            "text": "Human written | SEO optimized long article with outlines",
+            "img": "assets/img/popup/Presentation.png"
+          },
+          {
+            "subheading": "Generate Short Story",
+            "text": "Write a unique short story without plagiarizing Web-search Travel Blog Craft travel guides with real online references to boost your website's growth.",
+            "img": "assets/img/popup/Coading answers.png"
+          },
+          {
+            "subheading": "Rewrite Article(URL) with Keywords to Outrank Competitor",
+            "text": "Be like your competitor, but better. With one URL.",
+            "img": "assets/img/popup/Presentation.png"
+          },
+          {
+            "subheading": "Rewrite Your Articles",
+            "text": "Rewrite your articles in 10+ styles",
+            "img": "assets/img/popup/Coading answers.png"
+          },
+          {
+            "subheading": "Web-search Travel Blog",
+            "text": "Craft travel guides with real online re",
+            "img": "assets/img/popup/template-travel+blog.png"
+          },
+          {
+            "subheading": "Persuasive Paragraph Rewriter",
+            "text": "Revamp any paragraph on any topic to enhance its",
+            "img": "assets/img/popup/Profesional Writing.png"
+          }
+        ]
+      },
+      {
+        "heading": "Seo",
+        "class": "seo",
+        "data": [
+          {
+            "subheading": "Keyword Generator",
+            "text": "Create a list of keywords related to your Prompt.",
+            "img": "assets/img/popup/Profesional Writing.png"
+          },
+          {
+            "subheading": "Generate YouTube SEO Title&Description",
+            "text": "Create 15 SEO clickbait YouTube titles, description, tags and hashtags.",
+            "img": "assets/img/popup/template-youtube+seo.png"
+          },
+          {
+            "subheading": "Best Meta Description from Text",
+            "text": "Summary the best meta description from text provided.",
+            "img": "assets/img/popup/Presentation.png"
+          },
+          {
+            "subheading": "E-Commerce SEO: Generate Product Descriptions",
+            "text": "Create product descriptions for",
+            "img": "assets/img/popup/template-e-commence+seo.png"
+          }
+        ]
+      },
+      {
+        "heading": "Marketing",
+        "class": "marketing",
+        "data": [
+          {
+            "subheading": "Marketing data analysis and insights",
+            "text": "Marketers: Seek insights on how to analyze customer data and identify trends that can help inform marketing strategies.",
+            "img": "assets/img/popup/Presentation.png"
+          },
+          {
+            "subheading": "TIKTOK MARKETING TOOLS - Image and VTT idea",
+            "text": "This prompt is asking for an idea for a 10-image story on TikTok that includes voice over text. The story would be created using images and the narrator's voice would provide commentary or explanation for each image, creating a visual and audio experience",
+            "img": "assets/img/popup/template-tiktok+post.png"
+          },
+          {
+            "subheading": "Market Report/Research",
+            "text": "Write a comprehensive marketing report. Put your [title] in the prompt.",
+            "img": "assets/img/popup/Coading answers.png"
+          },
+          {
+            "subheading": "Brainstorm Generator",
+            "text": "What would you like me to brainstorm",
+            "img": "assets/img/popup/Profesional Writing.png"
+          }
+        ]
+      },
+      {
+        "heading": "Sumerize",
+        "class": "sumerize",
+        "data": [
+          {
+            "subheading": "Best & shortest summary",
+            "text": "Extreme Text Summarizer. It sums up the paragraph without losing any of its meaning. The result is a summary of the paragraph that is as short as possible while still keeping all of the original meaning and context.",
+            "img": "assets/img/popup/Profesional Writing.png"
+          },
+          {
+            "subheading": "Super Tech Translator",
+            "text": "Easy technology article reader for translating, summarizing, and elaborating",
+            "img": "assets/img/popup/Coading answers.png"
+          },
+          {
+            "subheading": "Summarize & highlight most important points of a text",
+            "text": "Create an abstract of your text and highlight the most important points",
+            "img": "assets/img/popup/Presentation.png"
+          },
+          {
+            "subheading": "All-in-one Translation",
+            "text": "Professional translator, proofread & text enhancer",
+            "img": "assets/img/popup/Coading answers.png"
+          },
+          {
+            "subheading": "Summarize & extract all facts as emoji bullets",
+            "text": "Extract all facts as emoji bullets and summarize the text given.",
+            "img": "assets/img/popup/Profesional Writing.png"
+          }
+        ]
+      },
+      {
+        "heading": "Coading",
+        "class": "coading",
+        "data": [
+          {
+            "subheading": "Code Like Senior (All Languages)",
+            "text": "Reduce your code size and make it more efficient, just like a senior dev",
+            "img": "assets/img/popup/Profesional Writing.png"
+          },
+          {
+            "subheading": "Readme Generator | Markdown Format | GitHub",
+            "text": "With this plugin, you can easily generate a README file without having to worry about formatting or layout. The plugin is easy to use and requires no additional steps. One of the key benefits of this plugin is that it is highly customizable. You can use",
+            "img": "assets/img/popup/template-ultra.png"
+          },
+          {
+            "subheading": "Transform your datas into SQL table",
+            "text": "Send any data and receive the the SQL queries allowing you to create an organised table in SQL based on your data. Precise the column names, the table name and if you want the full table to be displayed in GPT answer.",
+            "img": "assets/img/popup/Coading answers.png"
+          },
+          {
+            "subheading": "Cloud Expert | Your Own AWS/Cloud Expert",
+            "text": "Cloud Expert | Lambda Functions | API Gateway | Your Own AWS or Similar Services Expert",
+            "img": "assets/img/popup/Presentation.png"
+          },
+          {
+            "subheading": "FULLSTACK (html, css, js) expert",
+            "text": "Solve doubts, refactor , or develop . request any specific things, you can continue talking and create",
+            "img": "assets/img/popup/Coading answers.png"
+          },
+          {
+            "subheading": "ULTRAcoder-1 click create app from Idea",
+            "text": "Fast and advanced tool for application development. with Suggest Libraries and Frameworks, Folders and files organized and structured for the project, Code creation",
+            "img": "assets/img/popup/Profesional Writing.png"
+          }
+        ]
+      }
+    ]
+  }
+}
